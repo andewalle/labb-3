@@ -7,12 +7,13 @@ import javax.persistence.Id
 @Entity
 data class User (
 
-        @Id @GeneratedValue
-        val id: Long,
         val email: String? = null,
         var address: String? = null,
         var phoneNumber: Int? = null,
         var username: String,
         var password: String,
+
+        @Id @GeneratedValue
+        val id: Long = 0
 
         )
