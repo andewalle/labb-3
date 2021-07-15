@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.5.0"
-	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	kotlin("jvm") version "1.5.10"
-	kotlin("plugin.spring") version "1.5.10"
-	kotlin("plugin.jpa") version "1.5.10"
+	id("org.springframework.boot") version "2.3.6.RELEASE"
+	id("io.spring.dependency-management") version "1.0.10.RELEASE"
+	kotlin("jvm") version "1.4.20"
+	kotlin("plugin.spring") version "1.4.20"
+	kotlin("plugin.jpa") version "1.4.20"
 }
 
 group = "se.iths"
@@ -24,6 +24,14 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	runtimeOnly("mysql:mysql-connector-java")
+
+
+	implementation("org.mariadb.jdbc:mariadb-java-client:2.7.0")
+
+	implementation(   "org.springframework.cloud:spring-cloud-starter-openfeign:2.1.5.RELEASE")
+	implementation("org.springframework.cloud:spring-cloud-starter-kubernetes-all:1.1.2.RELEASE")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-ribbon:2.1.5.RELEASE")
+
 
 }
 

@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://192.168.99.100:31127/db_product?useSSL=false&requireSSL=false&serverTimezone=UTC
+    driverClassName: org.mariadb.jdbc.Driver
+    username: root
+    password: password
+  jpa:
+    showSql: false
+    hibernate:
+      ddlAuto: update
+
